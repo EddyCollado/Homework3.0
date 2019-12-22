@@ -1,11 +1,12 @@
 // Assignment Code/ DOM elements
 var generateBtn = document.querySelector("#generate");
+var lengthPass = 4;
 
 // Attempting to build a for loop that will generate through the functions
 //of the randomFunc object to generate a password
 function generatePassword() {
-  for (var i = 0; i < randomFunc; i++ ) {
-    
+  for (var i = 0; i < randomFunc.length; i++ ) {
+
   }
 }
 
@@ -14,11 +15,13 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   var lengthQ = prompt("Please indicate the length of desired password");
+  lengthQ.lengthPass = true;
 
-if (lengthQ !== randomFunc) {
+if (lengthQ == true) {
   alert("please enter only a numerical value");
 } else {
-  generatePassword.passwordText.innerHTML();
+  
+  generatePassword();
 }
 
 
@@ -30,13 +33,15 @@ if (lengthQ !== randomFunc) {
 
 }
 
-// Generate random characters
-var randomFunc = {
-  lower: getRandomLower,
-  upper: getRandomUpper,
-  number: getRandomNumber,
-  symbol: getRandomSymbol
-};
+//Generate random characters
+  var randomFunc = [{
+  lower: getRandomLower(),
+  upper: getRandomUpper(),
+  number: getRandomNumber(),
+  symbol: getRandomSymbol()
+}];
+
+
 
 // Generator functions
 
@@ -53,9 +58,11 @@ function getRandomNumber() {
 }
 
 function getRandomSymbol() {
-  const symbols = '!@#$%^&*(){}[]=<>/,.'
+  var symbols = '!@#$%^&*(){}[]=<>/,.'
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
+
+console.log(randomFunc);
 
 
 
