@@ -4,10 +4,6 @@ var generateBtn = document.querySelector("#generate");
 var lengthE1 = 12;
 
 
-
-// Attempting to build a for loop that will generate through the functions
-//of the randomFunc object to generate a password
-
 // Generator functions - http://www.net-comber.com/charset.html  
   function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -25,33 +21,33 @@ var lengthE1 = 12;
     var symbols = '!@#$%^&*(){}[]=<>/,.'
     return symbols[Math.floor(Math.random() * symbols.length)];
   }
-
+// The 12 characters it was loop around into 1 variable
   var randomFunc = [
     {lower: getRandomLower()},
     {upper: getRandomUpper()},
     {number: getRandomNumber()},
-    {symbol: getRandomSymbol()
-  },{lower: getRandomLower()},
-  {upper: getRandomUpper()},
-  {number: getRandomNumber()},
-  {symbol: getRandomSymbol()
-},{lower: getRandomLower()},
-{upper: getRandomUpper()},
-{number: getRandomNumber()},
-{symbol: getRandomSymbol()
-}];
+    {symbol: getRandomSymbol()},
+    {lower: getRandomLower()},
+    {upper: getRandomUpper()},
+    {number: getRandomNumber()},
+    {symbol: getRandomSymbol()},
+    {lower: getRandomLower()},
+    {upper: getRandomUpper()},
+    {number: getRandomNumber()},
+    {symbol: getRandomSymbol()}
+  ];
 
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  //var password = generatePassword();
   var passwordText = document.querySelector("#password");
   var lengthQ = prompt("Please indicate the length of desired password");
   
 
   if (lengthQ === "12") {
-    passwordText.textContent = password;
     passwordText.innerHTML = randomFunc;
+    
     
 
     generatePassword();
