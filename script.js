@@ -1,38 +1,43 @@
 // Assignment Code/ DOM elements
 var generateBtn = document.querySelector("#generate");
-var lengthPass = 4;
+
+
 
 // Attempting to build a for loop that will generate through the functions
 //of the randomFunc object to generate a password
 function generatePassword() {
   for (var i = 0; i < randomFunc.length; i++ ) {
-
+ 
   }
 }
+
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   var lengthQ = prompt("Please indicate the length of desired password");
-  lengthQ.lengthPass = true;
-
-if (lengthQ == true) {
-  alert("please enter only a numerical value");
-} else {
   
-  generatePassword();
+
+  if (lengthQ === "") {
+  alert("please enter a numerical value");
+} else {
+  passwordText.value = password;
 }
 
+
+// Copy to clipboard 
+// copyBtn.setAttribute();
+// copyBtn.focus();
 
 }
 
 //Generate random characters
-  var randomFunc = [{
-  lower: getRandomLower(),
-  upper: getRandomUpper(),
-  number: getRandomNumber(),
-  symbol: getRandomSymbol()
+  var randomFunc = [
+  {lower: getRandomLower()},
+  {upper: getRandomUpper()},
+  {number: getRandomNumber()},
+  {symbol: getRandomSymbol()
 }];
 
 
@@ -65,6 +70,7 @@ function copyToClipboard() {
 }
 
 // Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);
 
 
