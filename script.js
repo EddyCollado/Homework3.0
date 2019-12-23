@@ -25,12 +25,6 @@ if (lengthQ == true) {
 }
 
 
-  passwordText.value = password;
-
-
-  copyBtn.removeAttribute("disabled");
-  copyBtn.focus();
-
 }
 
 //Generate random characters
