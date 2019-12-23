@@ -7,10 +7,10 @@ For this homework assignment, we were tasked to create a password generator usin
 ![DeveloperTools](Assets/DevToolsSnap.PNG)
 
 
-Using Chrome Developer Tools, I was able to utilize reverse engineering to achieve desired results much easier. Im very excited to start taking this to the next level with something unique.
+Using Chrome Developer Tools has been essential to making sure the JavaScript is working correctly. I would have the Dev Tools and Visual Code side by side to make sure all changes are accounted for.
 
 ## JavaScript Sample
 
 ![JavaScript sample](Assets/JavaScriptCodeSnap.PNG)
 
-The most difficult part of this assignment has to be making sure the media queries arent conflicting with each other. There was a lot of back and forth but it was necessary and helped me understand the importance of organizing and cleaning up your code.
+

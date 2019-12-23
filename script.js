@@ -1,8 +1,5 @@
 // Assignment Code/ DOM elements
 var generateBtn = document.querySelector("#generate");
-//Trying to see what a preset length would do
-var lengthE1 = 12;
-
 
 // Generator functions - http://www.net-comber.com/charset.html  
   function getRandomLower() {
@@ -21,7 +18,8 @@ var lengthE1 = 12;
     var symbols = '!@#$%^&*(){}[]=<>/,.'
     return symbols[Math.floor(Math.random() * symbols.length)];
   }
-// The 12 characters it was loop around into 1 variable
+
+// The 12 characters it needs to loop around into 1 variable
   var randomFunc = [
     {lower: getRandomLower()},
     {upper: getRandomUpper()},
@@ -37,26 +35,18 @@ var lengthE1 = 12;
     {symbol: getRandomSymbol()}
   ];
 
-
 // Write password to the #password input
 function writePassword() {
-  //var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  var lengthQ = prompt("Please indicate the length of desired password");
-  
-
-  if (lengthQ === "12") {
-    passwordText.innerHTML = randomFunc;
+    //var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    var lengthQ = prompt("Please indicate the length of desired password");
     
-    
-
-    generatePassword();
-    
-    
-  } else {
-    alert("please enter 12");
-  
-  }
+    if (lengthQ === "12") {
+      passwordText.innerHTML = randomFunc;
+      generatePassword();
+    } else {
+      alert("please enter 12");
+    }
 
   function generatePassword() {
     for (var i = 0; i < randomFunc.length; i++ ) {
@@ -65,29 +55,11 @@ function writePassword() {
     }
   }
 
-
-  
-
-
-
 // Copy to clipboard 
 // copyBtn.setAttribute();
 // copyBtn.focus();
 
-
-
 }
-
-//Generate random characters
-  
-
-
-// Generator functions - http://www.net-comber.com/charset.html
-
-
-
-
-
 
 function copyToClipboard() {
   // BONUS 
@@ -96,7 +68,5 @@ function copyToClipboard() {
 // Add event listener to generate button
 
 generateBtn.addEventListener("click", writePassword);
-
-
 
 // BONUS EVENT LISTENER
