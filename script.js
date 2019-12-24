@@ -21,18 +21,18 @@ var generateBtn = document.querySelector("#generate");
 
 // The 12 characters it needs to loop around into 1 variable
   var randomFunc = [
-    {lower: getRandomLower()},
-    {upper: getRandomUpper()},
-    {number: getRandomNumber()},
-    {symbol: getRandomSymbol()},
-    {lower: getRandomLower()},
-    {upper: getRandomUpper()},
-    {number: getRandomNumber()},
-    {symbol: getRandomSymbol()},
-    {lower: getRandomLower()},
-    {upper: getRandomUpper()},
-    {number: getRandomNumber()},
-    {symbol: getRandomSymbol()}
+    getRandomLower(),
+    getRandomUpper(),
+    getRandomNumber(),
+    getRandomSymbol(),
+    getRandomLower(),
+    getRandomUpper(),
+    getRandomNumber(),
+    getRandomSymbol(),
+    getRandomLower(),
+    getRandomUpper(),
+    getRandomNumber(),
+    getRandomSymbol()
   ];
 
 // Write password to the #password input
@@ -41,8 +41,13 @@ function writePassword() {
     var passwordText = document.querySelector("#password");
     var lengthQ = prompt("Please indicate the length of desired password");
     
+
+    
     if (lengthQ === "12") {
-      passwordText.innerHTML = randomFunc;
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.join('');
+
+
       generatePassword();
     } else {
       alert("please enter 12");
