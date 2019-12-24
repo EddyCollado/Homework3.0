@@ -25,13 +25,13 @@ var generateBtn = document.querySelector("#generate");
     getRandomUpper(),
     getRandomNumber(),
     getRandomSymbol(),
-    getRandomLower(),
     getRandomUpper(),
-    getRandomNumber(),
+    getRandomLower(),
     getRandomSymbol(),
+    getRandomNumber(),
+    getRandomNumber(),
     getRandomLower(),
     getRandomUpper(),
-    getRandomNumber(),
     getRandomSymbol()
   ];
 
@@ -39,7 +39,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
     //var password = generatePassword();
     var passwordText = document.querySelector("#password");
-    var lengthQ = prompt("Please indicate the length of desired password");
+    var lengthQ = prompt("Please enter 12 for length of password (more lengths soon)");
     
 
     
