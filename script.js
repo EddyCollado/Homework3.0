@@ -1,5 +1,6 @@
 // Assignment Code/ DOM elements
 var generateBtn = document.querySelector("#generate");
+var copyClipBtn = document.querySelector("#cobyBtn");
 
 // Generator functions - http://www.net-comber.com/charset.html  
   function getRandomLower() {
@@ -34,6 +35,9 @@ var generateBtn = document.querySelector("#generate");
     getRandomUpper(),
     getRandomSymbol()
   ];
+//Copy password to clipboard
+
+
 
 // Write password to the #password input
 function writePassword() {
@@ -67,7 +71,14 @@ function writePassword() {
 }
 
 function copyToClipboard() {
-  // BONUS 
+  // BONUS
+  var copyText = document.querySelector("#password");
+  
+  copyText.select();
+
+  document.execCommand("copy");
+
+  alert("Copied the text: " + copyText.value);
 }
 
 // Add event listener to generate button
@@ -75,3 +86,5 @@ function copyToClipboard() {
 generateBtn.addEventListener("click", writePassword);
 
 // BONUS EVENT LISTENER
+
+copyClipBtn.addEventListener("click", copyToClipboard);
