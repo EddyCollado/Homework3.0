@@ -35,6 +35,23 @@ var copyClipBtn = document.querySelector("#cobyBtn");
     getRandomUpper(),
     getRandomSymbol()
   ];
+
+
+ // Shuffles array in place.
+ // @param {Array} a items An array containing the items.
+ // Borrowed code from https://stackoverflow.com/questions/6274339
+  function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+  
 //Copy password to clipboard
 
 
@@ -57,6 +74,7 @@ function writePassword() {
 
     } else if (lengthQ ==="2") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,2).join('');
 
 
@@ -64,6 +82,7 @@ function writePassword() {
 
     } else if (lengthQ ==="3") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,3).join('');
 
 
@@ -71,6 +90,7 @@ function writePassword() {
 
     } else if (lengthQ ==="4") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,4).join('');
 
 
@@ -78,6 +98,7 @@ function writePassword() {
 
     } else if (lengthQ ==="5") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,5).join('');
 
 
@@ -85,6 +106,7 @@ function writePassword() {
 
     } else if (lengthQ ==="6") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,6).join('');
 
 
@@ -92,6 +114,7 @@ function writePassword() {
 
     } else if (lengthQ ==="7") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,7).join('');
 
 
@@ -99,6 +122,7 @@ function writePassword() {
 
     } else if (lengthQ ==="8") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,8).join('');
 
 
@@ -106,6 +130,7 @@ function writePassword() {
 
     } else if (lengthQ ==="9") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,9).join('');
 
 
@@ -113,6 +138,7 @@ function writePassword() {
 
     }else if (lengthQ ==="10") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,10).join('');
 
 
@@ -120,6 +146,7 @@ function writePassword() {
 
     } else if (lengthQ ==="11") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.slice(0,11).join('');
 
 
@@ -127,6 +154,7 @@ function writePassword() {
 
     } else if (lengthQ ==="12") {
       passwordText.innerHTML = "";
+      shuffle(randomFunc);
       passwordText.textContent = randomFunc.join('');
 
 
