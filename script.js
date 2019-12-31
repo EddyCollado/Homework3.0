@@ -43,18 +43,97 @@ var copyClipBtn = document.querySelector("#cobyBtn");
 function writePassword() {
     //var password = generatePassword();
     var passwordText = document.querySelector("#password");
-    var lengthQ = prompt("Please enter 12 for length of password (more lengths soon)");
+    var lengthQ = prompt("Please enter a number between 1 - 12 for length of password.");
+    //var randomArray = randomFunc[Math.floor(Math.random()*randomFunc.length)];
     
 
     
-    if (lengthQ === "12") {
+    if (lengthQ === "1") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc[Math.floor(Math.random()*randomFunc.length)];
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="2") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,2).join('');
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="3") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,3).join('');
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="4") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,4).join('');
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="5") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,5).join('');
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="6") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,6).join('');
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="7") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,7).join('');
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="8") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,8).join('');
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="9") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,9).join('');
+
+
+      generatePassword();
+
+    }else if (lengthQ ==="10") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,10).join('');
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="11") {
+      passwordText.innerHTML = "";
+      passwordText.textContent = randomFunc.slice(0,11).join('');
+
+
+      generatePassword();
+
+    } else if (lengthQ ==="12") {
       passwordText.innerHTML = "";
       passwordText.textContent = randomFunc.join('');
 
 
       generatePassword();
+
     } else {
-      alert("please enter 12");
+      alert("please enter a number between 1 - 12");
     }
 
   function generatePassword() {
@@ -70,8 +149,9 @@ function writePassword() {
 
 }
 
-function copyToClipboard() {
   // BONUS
+function copyToClipboard() {
+
   var copyText = document.querySelector("#password");
   
   copyText.select();
